@@ -1,11 +1,43 @@
-function calcularEconomia(){
+// CALCULADORA DE ECONOMIA DE ÁGUA
 
-    let litros = Number(
-        document.getElementById("litros").value
-    );
+const botao = document.getElementById("btnCalcular");
 
-    let anual = litros * 365;
+botao.addEventListener("click", function(){
+
+    let litros =
+    Number(document.getElementById("litros").value);
+
+    if(litros <= 0){
+
+        document.getElementById("resultado").innerHTML =
+        "⚠️ Digite um valor válido.";
+
+        return;
+    }
+
+    let economiaAnual = litros * 365;
 
     document.getElementById("resultado").innerHTML =
-        `🌱 Economia anual estimada: ${anual.toLocaleString()} litros de água.`;
+    `💧 Economia anual estimada: ${economiaAnual.toLocaleString('pt-BR')} litros de água.`;
+});
+
+
+// CONTADOR ANIMADO
+
+let contador = 0;
+let meta = 5000;
+
+function atualizarContador(){
+
+    if(contador < meta){
+
+        contador += 50;
+
+        document.getElementById("arvores").textContent =
+        contador.toLocaleString("pt-BR");
+
+        requestAnimationFrame(atualizarContador);
+    }
 }
+
+atualizarContador();
