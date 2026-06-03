@@ -1,7 +1,11 @@
-const botao = document.getElementById("btnSaibaMais");
-const mensagem = document.getElementById("mensagem");
+function calcularEconomia(){
 
-botao.addEventListener("click", () => {
-    mensagem.innerHTML =
-        "🌱 O futuro depende da união entre inovação agrícola e preservação ambiental!";
-});
+    let litros = Number(
+        document.getElementById("litros").value
+    );
+
+    let anual = litros * 365;
+
+    document.getElementById("resultado").innerHTML =
+        `🌱 Economia anual estimada: ${anual.toLocaleString()} litros de água.`;
+}
