@@ -1,43 +1,15 @@
-// CALCULADORA DE ECONOMIA DE ÁGUA
+const botao = document.getElementById("btnMensagem");
+const mensagem = document.getElementById("mensagem");
 
-const botao = document.getElementById("btnCalcular");
+const frases = [
+    "🌱 Produzir com responsabilidade é cultivar o futuro.",
+    "🌎 Preservar o meio ambiente é investir nas próximas gerações.",
+    "🚜 Tecnologia e sustentabilidade fortalecem o agronegócio.",
+    "🌾 O campo sustentável gera desenvolvimento e qualidade de vida.",
+    "💧 Cada recurso natural preservado é uma colheita garantida para amanhã."
+];
 
-botao.addEventListener("click", function(){
-
-    let litros =
-    Number(document.getElementById("litros").value);
-
-    if(litros <= 0){
-
-        document.getElementById("resultado").innerHTML =
-        "⚠️ Digite um valor válido.";
-
-        return;
-    }
-
-    let economiaAnual = litros * 365;
-
-    document.getElementById("resultado").innerHTML =
-    `💧 Economia anual estimada: ${economiaAnual.toLocaleString('pt-BR')} litros de água.`;
+botao.addEventListener("click", () => {
+    const indice = Math.floor(Math.random() * frases.length);
+    mensagem.textContent = frases[indice];
 });
-
-
-// CONTADOR ANIMADO
-
-let contador = 0;
-let meta = 5000;
-
-function atualizarContador(){
-
-    if(contador < meta){
-
-        contador += 50;
-
-        document.getElementById("arvores").textContent =
-        contador.toLocaleString("pt-BR");
-
-        requestAnimationFrame(atualizarContador);
-    }
-}
-
-atualizarContador();
