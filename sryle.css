@@ -1,88 +1,112 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #dff5d8, #f5fff0);
-    color: #2e4d2f;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body{
+    background:#f4f9f1;
+    color:#333;
 }
 
-header {
-    background: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+header{
+    background:#2e7d32;
+    padding:15px 8%;
 }
 
-header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5rem;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-header p {
-    font-size: 1.1rem;
+nav h1{
+    color:white;
 }
 
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
 }
 
-.card {
-    background: white;
-    max-width: 700px;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    text-align: center;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.card h2 {
-    color: #2e7d32;
-    margin-bottom: 20px;
+.banner{
+    height:80vh;
+    background:linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
-.card p {
-    line-height: 1.8;
-    margin-bottom: 15px;
+.banner-texto{
+    max-width:700px;
 }
 
-button {
-    margin-top: 15px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: #43a047;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+.banner h2{
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
-button:hover {
-    background: #2e7d32;
-    transform: scale(1.05);
+.banner p{
+    font-size:1.2rem;
+    margin-bottom:20px;
 }
 
-#mensagem {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #1b5e20;
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    background:#4caf50;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
 }
 
-footer {
-    background: #2e7d32;
-    color: white;
-    text-align: center;
-    padding: 15px;
+button:hover{
+    background:#2e7d32;
+}
+
+.secao{
+    padding:60px 10%;
+    text-align:center;
+}
+
+.secao h2{
+    color:#2e7d32;
+    margin-bottom:20px;
+}
+
+.destaque{
+    background:#dff0d8;
+}
+
+.mensagem{
+    text-align:center;
+    padding:25px;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:15px;
 }
