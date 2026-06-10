@@ -1,15 +1,15 @@
-const curiosidades = [
-    "🌱 Uma árvore adulta pode absorver até 22 kg de CO₂ por ano.",
-    "🚜 A agricultura de precisão reduz desperdícios e aumenta a produtividade.",
-    "💧 Sistemas inteligentes de irrigação economizam milhares de litros de água.",
-    "🌾 A rotação de culturas melhora a fertilidade do solo naturalmente.",
+const mensagens = [
+    "🌱 Produzir com responsabilidade é cultivar o futuro.",
+    "💧 Cada recurso natural preservado é uma colheita garantida.",
+    "🚜 Tecnologia e sustentabilidade fortalecem o agronegócio.",
+    "🌾 A rotação de culturas melhora a fertilidade do solo.",
     "🌎 Produção sustentável ajuda a preservar a biodiversidade."
 ];
 
-const botao = document.getElementById("btnSaibaMais");
+const botao = document.getElementById("btnMensagem");
 const mensagem = document.getElementById("mensagem");
 
 botao.addEventListener("click", () => {
-    const sorteio = Math.floor(Math.random() * curiosidades.length);
-    mensagem.innerHTML = curiosidades[sorteio];
+    const indice = Math.floor(Math.random() * mensagens.length);
+    mensagem.innerHTML = mensagens[indice];
 });
